@@ -12,6 +12,8 @@ from apps import create_app, db
 
 get_config_mode = 'Production' 
 
+print("I AM OVER")
+
 try:
     # Load the configuration using the default values
     app_config = config_dict[get_config_mode.capitalize()]
@@ -22,5 +24,3 @@ except KeyError:
 app = create_app(app_config)
 Migrate(app, db)
 
-
- 
